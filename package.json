@@ -19,7 +19,6 @@
     "tamagochi",
     "game"
   ],
-  "author": "Anna Guk",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AnnaGuk/fox-game/issues"
@@ -33,10 +32,8 @@
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.2"
   },
-  "resolutions": {
-    "node-forge": "^0.10.0"
-  },
   "browserslist": [
-    "last 2 Chrome versions"
+    "last 2 Chrome versions",
+    "last 2 Firefox versions"
   ]
 }
