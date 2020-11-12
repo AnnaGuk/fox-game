@@ -12,15 +12,15 @@ Make the fox live as long as possible by attending to it's needs: feed the fox w
 
 ### Control buttons:
 
-- ![Middle button](/src/assets/middle-button.png?raw=true) Press the middle button to start the game and to accept your choice of action. (works as 'START', 'OK', 'ACCEPT' button);
-- ![Left button](/src/assets/left-button.png?raw=true) Press to move left;
-- ![Right button](/src/assets/right-button.png?raw=true) Press to move right;
+- <img src="./src/assets/middle-button.png" width="50" /> - Press the middle button to start the game and to accept your choice of action. (works as 'START', 'OK', 'ACCEPT' button);
+- <img src="./src/assets/left-button.png" width="40" /> - Press to move left;
+- <img src="./src/assets/right-button.png" width="40" /> - Press to move right;
 
 ### Switch between states:
 
-- ![Feed fox](/src/assets/fish.png?raw=true) Select to feed the fox;
-- ![Clean poop](/src/assets/poop.png?raw=true) Select to clean after the fox;
-- ![Change weather](/src/assets/weather.png?raw=true) Select to change the weather;
+- <img src="./src/assets/fish.png" width="50" /> - Select to feed the fox;
+- <img src="./src/assets/poop.png" width="50" /> - Select to clean after the fox;
+- <img src="./src/assets/weather.png" width="50" /> - Select to change the weather;
 
 #### Run project:
 
