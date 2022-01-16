@@ -2,7 +2,6 @@
   "name": "fox-game",
   "version": "1.0.0",
   "description": "Tamagochi-like game",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
@@ -25,10 +24,12 @@
   },
   "homepage": "https://github.com/AnnaGuk/fox-game#readme",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
     "eslint": "^8.6.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.1",
+    "jest-esm-transformer": "^1.0.0",
     "parcel": "^2.1.1",
     "prettier": "^2.1.2"
   },
@@ -36,5 +37,10 @@
     "node-forge": "^1.0.0",
     "postcss": "^8.4.5"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "jest": {
+    "transform": {
+      "\\.m?jsx?$": "jest-esm-transformer"
+    }
+  }
 }

@@ -64,51 +64,54 @@ const gameState = {
 
     return this.clock;
   },
-  startGame() {
-    if (
-      this.current === "INIT" ||
-      this.current === "DEAD" ||
-      this.current === "HATCHING"
-    ) {
-      this.current = "HATCHING";
-      this.wakeTime = this.clock + 3;
-      modFox("egg");
-      modScene("day");
-      writeModal();
-      writeToLocalStorage("current", this.current);
-      writeToLocalStorage("wakeTime", this.wakeTime);
-      writeToLocalStorage("clock", this.clock);
-    } else {
-      writeModal("Your game was restored");
-      modScene(SCENES[this.scene]);
+  restoreGame() {
+    modScene(SCENES[this.scene]);
 
-      switch (this.current) {
-        case "IDLING":
-          this.determineFoxState();
-          window.setTimeout(writeModal, 3000);
-          break;
-        case "SLEEP":
-          this.sleep();
-          window.setTimeout(writeModal, 3000);
-          break;
-        case "HUNGRY":
-          this.getHungry();
-          window.setTimeout(writeModal, 3000);
-          break;
-        case "CELEBRATING":
-          this.startCelebrating();
-          window.setTimeout(writeModal, 3000);
-          break;
-        case "POOPING":
-          this.poop();
-          window.setTimeout(writeModal, 3000);
-          break;
-        case "FEEDING":
-          this.feed();
-          window.setTimeout(writeModal, 3000);
-          break;
-      }
+    switch (this.current) {
+      case "IDLING":
+        this.determineFoxState();
+        window.setTimeout(writeModal, 3000);
+        writeModal("Your game was restored");
+        break;
+      case "SLEEP":
+        this.sleep();
+        window.setTimeout(writeModal, 3000);
+        writeModal("Your game was restored");
+        break;
+      case "HUNGRY":
+        this.getHungry();
+        window.setTimeout(writeModal, 3000);
+        writeModal("Your game was restored");
+        break;
+      case "CELEBRATING":
+        this.startCelebrating();
+        window.setTimeout(writeModal, 3000);
+        writeModal("Your game was restored");
+        break;
+      case "POOPING":
+        this.poop();
+        window.setTimeout(writeModal, 3000);
+        writeModal("Your game was restored");
+        break;
+      case "FEEDING":
+        this.feed();
+        window.setTimeout(writeModal, 3000);
+        writeModal("Your game was restored");
+        break;
+      default:
+        this.current = "INIT";
+        writeModal("Press the middle button to start");
     }
+  },
+  startGame() {
+    this.current = "HATCHING";
+    this.wakeTime = this.clock + 3;
+    modFox("egg");
+    modScene("day");
+    writeModal();
+    writeToLocalStorage("current", this.current);
+    writeToLocalStorage("wakeTime", this.wakeTime);
+    writeToLocalStorage("clock", this.clock);
   },
   wake() {
     this.current = "IDLING";

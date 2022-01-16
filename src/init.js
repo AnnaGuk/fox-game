@@ -14,7 +14,7 @@ const init = async () => {
       nextTimeToTick = now + TICK_RATE;
     }
     window.addEventListener("load", () => {
-      gameState.startGame();
+      gameState.restoreGame();
     });
     requestAnimationFrame(nextAnimationFrame);
   };
