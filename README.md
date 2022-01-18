@@ -27,3 +27,12 @@ Make the fox live as long as possible by attending to it's needs: feed the fox w
 ```
 npm run dev
 ```
+
+### Test project:
+
+Use one of the below scripts for testing
+
+```
+"test": "jest",
+"cypress:open": "npx cypress open"
+```
