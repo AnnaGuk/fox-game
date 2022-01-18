@@ -65,6 +65,35 @@ const gameState = {
     return this.clock;
   },
   restoreGame() {
+    this.clock = restoreFromLocalStorage("clock")
+      ? restoreFromLocalStorage("clock")
+      : 1;
+    this.wakeTime = restoreFromLocalStorage("wakeTime")
+      ? restoreFromLocalStorage("wakeTime")
+      : -1;
+    this.sleepTime = restoreFromLocalStorage("sleepTime")
+      ? restoreFromLocalStorage("sleepTime")
+      : -1;
+    this.hungryTime = restoreFromLocalStorage("hungryTime")
+      ? restoreFromLocalStorage("hungryTime")
+      : -1;
+    this.dieTime = restoreFromLocalStorage("dieTime")
+      ? restoreFromLocalStorage("dieTime")
+      : -1;
+    this.poopTime = restoreFromLocalStorage("poopTime")
+      ? restoreFromLocalStorage("poopTime")
+      : -1;
+    this.timeToStartCelebrating = restoreFromLocalStorage(
+      "timeToStartCelebrating"
+    )
+      ? restoreFromLocalStorage("timeToStartCelebrating")
+      : -1;
+    this.timeToEndCelebrating = restoreFromLocalStorage("timeToEndCelebrating")
+      ? restoreFromLocalStorage("timeToEndCelebrating")
+      : -1;
+    this.scene = restoreFromLocalStorage("scene")
+      ? restoreFromLocalStorage("scene")
+      : 0;
     modScene(SCENES[this.scene]);
 
     switch (this.current) {
